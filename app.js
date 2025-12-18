@@ -39,13 +39,60 @@ const hasSoup = foods.includes('soup')
 console.log('Exercise 10 result:', hasSoup);
 
 // Exercise 11
-
-
+const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
+const odds = nums.filter((num) => {
+  return num % 2;
+});
+console.log('Exercise 11 result:', odds);
 // Exercise 12
+//%3 fizz
+//%5 buzz
+//%3 || %5 fizzbuzz
+const fizz = nums.filter((nums,index) => {
+    if (index %3 === 0) return nums
+});
+const buzz = nums.filter((nums,index) => {
+    if (index %5 === 0) return nums
+});
+const fizzbuzz = nums.filter((nums,index) => {
+    if (index %5 === 0 && index %3 === 0) return nums
+});
 
+console.log('Exercise 12 Results:');
+console.log('  fizz:', fizz);
+console.log('  buzz:', buzz);
+console.log('  fizzbuzz:', fizzbuzz);
 
 // Exercise 13
+const numArrays = [
+	[100, 5, 23],
+	[15, 21, 72, 9],
+	[45, 66],
+	[7, 81, 90]
+];
+
+const numList= numArrays.at(-1);
+
+console.log('Exercise 13 result:', numList);
 
 // Exercise 14
+const num = numArrays[2][1]
+console.log('Exercise 14 result:', num);
+
 
 // Exercise 15
+let total = 0;
+// for (let i = 0; i < numArrays.length; i++) {
+// for (let j = 0; j < numArrays.length; j++) {
+//         total = total + numArrays[i][j];
+//     }
+// }
+
+numArrays.forEach((innerArray) => {
+innerArray.forEach((number) => {
+    total += number;
+  });
+  
+});
+
+console.log('Exercise 15 result:\n', total);
